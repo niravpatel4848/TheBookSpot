@@ -1,26 +1,24 @@
 ﻿@model TheBookSpot.Models.Category
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ADD GENRE</h2>
+<h2>EDIT GENRE</h2>
 <div class="container">
     <div class="row">
-        <form method="post" asp-action="Create">
+        <form method="post" asp-action="Edit">
             <fieldset>
-                <div class="form-group text-danger" asp-validation-summary="ModelOnly">
-
-                </div>
+                <input type="hidden" asp-for="Id" />
                 <div class="form-group">
                     <label asp-for="Name" class="form-label mt-4">Name</label>
-                    <input asp-for="Name" type="text" class="form-control" id="genreName" placeholder="Enter Genre">
+                    <input asp-for="Name" type="text" class="form-control" id="genreName" >
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
 
                 <div class="form-group pt-5">
-                    <button type="submit" class="btn btn-primary">ADD</button>
+                    <button type="submit" class="btn btn-primary">UPDATE</button>
                     <a class="btn btn-success" asp-action="Index" asp-controller="Category">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;BACK</a>
 
